@@ -12,7 +12,7 @@ public class BasicApplicationTests {
  
  @Test
  public void contextLoads() {
- 	    String meessage= "probando el pipeline con jenkins y haciendo merge probando slack3";
+ 	    String meessage= "probando test";
  	    Assert.assertNotNull(meessage);
  }
  
