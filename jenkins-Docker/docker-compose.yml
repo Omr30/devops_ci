@@ -8,6 +8,23 @@ services:
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
+    networks:
+      - net_jenkins_sonarqube
+    
+  sonarqube:
+    container_name: sonarqube_compose
+    image: sonarqube
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+    volumes:
+      - sonarqube_home:/var/sonarqube_home
+    networks:
+      - net_jenkins_sonarqube
     
 volumes:
   jenkins_home:
+  sonarqube_home:
+
+networks:
+  net_jenkins_sonarqube:
